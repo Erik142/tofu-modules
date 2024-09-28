@@ -81,7 +81,6 @@ locals {
             advertisementType = "Service"
             service = {
               addresses = [
-                "ClusterIP",
                 "ExternalIP",
                 "LoadBalancerIP"
               ]
