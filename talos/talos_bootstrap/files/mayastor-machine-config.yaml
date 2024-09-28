@@ -1,0 +1,14 @@
+machine:
+  sysctls:
+    vm.nr_hugepages: "1024"
+  kubelet:
+    extraArgs:
+      node-labels: "openebs.io/engine=mayastor"
+    extraMounts:
+      - destination: /var/openebs
+        type: bind
+        source: /var/openebs
+        options:
+          - rbind
+          - rshared
+          - rw
